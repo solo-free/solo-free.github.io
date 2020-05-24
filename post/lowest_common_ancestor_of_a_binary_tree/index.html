@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>236. Lowest Common Ancestor of a Binary Tree - </title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Description: Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itsel" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/lowest_common_ancestor_of_a_binary_tree/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="236. Lowest Common Ancestor of a Binary Tree" />
+<meta property="og:description" content="Description: Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itsel" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/lowest_common_ancestor_of_a_binary_tree/" />
+<meta property="article:published_time" content="2020-05-05T12:02:08+08:00" />
+<meta property="article:modified_time" content="2020-05-05T12:02:08+08:00" />
+<meta itemprop="name" content="236. Lowest Common Ancestor of a Binary Tree">
+<meta itemprop="description" content="Description: Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itsel">
+
+
+<meta itemprop="datePublished" content="2020-05-05T12:02:08&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-05T12:02:08&#43;08:00" />
+<meta itemprop="wordCount" content="502">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="236. Lowest Common Ancestor of a Binary Tree"/>
+<meta name="twitter:description" content="Description: Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itsel"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">236. Lowest Common Ancestor of a Binary Tree</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-05 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#description">Description:</a></li>
+<li><a href="#examples">Examples:</a></li>
+<li><a href="#note">Note:</a></li>
+<li><a href="#thinking">Thinking:</a></li>
+<li><a href="#solutions">Solutions:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h3 id="description">Description:</h3>
+
+<blockquote>
+<p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes
+in the tree.</p>
+
+<p>According to the definition of LCA on Wikipedia: “The lowest common ancestor
+is defined between two nodes p and q as the lowest node in T that has both p
+and q as descendants (where we allow a node to be a descendant of itself).”</p>
+
+<p>Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]</p>
+</blockquote>
+
+<h3 id="examples">Examples:</h3>
+
+<blockquote>
+<p>Example 1:</p>
+
+<p>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1 <br/>
+Output: 3
+Explanation: The LCA of nodes 5 and 1 is 3.</p>
+</blockquote>
+
+<p><br/></p>
+
+<blockquote>
+<p>Example 2:
+Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4 <br/>
+Output: 5
+Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant
+of itself according to the LCA definition.</p>
+</blockquote>
+
+<h3 id="note">Note:</h3>
+
+<blockquote>
+<p>All of the nodes&rsquo; values will be unique.
+p and q are different and both values will exist in the binary tree.</p>
+</blockquote>
+
+<h3 id="thinking">Thinking:</h3>
+
+<blockquote>
+<p>该题考察一颗二叉树中，不同两个节点的最小公共祖先是谁，利用递归方法的特点，bottom
+up return， 可以知道若找到两个节点，则返回的递归到的root节点即为其最小公共祖先</p>
+</blockquote>
+
+<h3 id="solutions">Solutions:</h3>
+
+<blockquote>
+<p>Definition for a binary tree node.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"> <span class="k">class</span> <span class="nc">TreeNode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>迭代法:</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Variable to store LCA node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ans</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">lowestCommonAncestor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+        <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">        :type root: TreeNode
+</span><span class="s2">        :type p: TreeNode
+</span><span class="s2">        :type q: TreeNode
+</span><span class="s2">        :rtype: TreeNode
+</span><span class="s2">        &#34;&#34;&#34;</span>
+
+        <span class="k">def</span> <span class="nf">recurse_tree</span><span class="p">(</span><span class="n">current_node</span><span class="p">):</span>
+          <span class="k">if</span> <span class="ow">not</span> <span class="n">current_node</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+          <span class="n">left</span> <span class="o">=</span> <span class="n">recurse_tree</span><span class="p">(</span><span class="n">current_node</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+          <span class="n">right</span> <span class="o">=</span> <span class="n">recurse_tree</span><span class="p">(</span><span class="n">current_node</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+
+          <span class="n">mid</span> <span class="o">=</span> <span class="n">current_node</span> <span class="o">==</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">current_node</span> <span class="o">==</span> <span class="n">q</span>
+
+          <span class="k">if</span> <span class="n">mid</span> <span class="o">+</span> <span class="n">left</span> <span class="o">+</span> <span class="n">right</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ans</span> <span class="o">=</span> <span class="n">current_node</span>
+
+          <span class="k">return</span> <span class="n">mid</span> <span class="ow">or</span> <span class="n">left</span> <span class="ow">or</span> <span class="n">right</span>
+
+    <span class="n">recurse_tree</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ans</span></code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>父指针回溯法：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">lowestCommonAncestor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+        <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">        :type root: TreeNode
+</span><span class="s2">        :type p: TreeNode
+</span><span class="s2">        :type q: TreeNode
+</span><span class="s2">        :rtype: TreeNode
+</span><span class="s2">        &#34;&#34;&#34;</span>
+
+        <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">root</span><span class="p">]</span>
+
+        <span class="c1"># dictionary for parent pointers</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="p">{</span><span class="n">root</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+
+        <span class="k">while</span> <span class="n">p</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">parent</span> <span class="ow">or</span> <span class="n">q</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">parent</span><span class="p">:</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+                <span class="n">parent</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+                <span class="n">parent</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+
+        <span class="n">ancestors</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+            <span class="n">ancestors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
+
+        <span class="k">while</span> <span class="n">q</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ancestors</span><span class="p">:</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">q</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">q</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/serialize_and_deserialize_binary_tree/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">297. Serialize_and_deserialize_binary_tree</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/populating_next_right_pointers_in_each_node_ii/">
+            <span class="next-text nav-default">117. Populating_next_right_pointers_in_each_node_ii</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

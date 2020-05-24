@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>701. Insert_into_a_binary_search_tree - </title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Description: Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/insert_into_a_binary_search_tree/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="701. Insert_into_a_binary_search_tree" />
+<meta property="og:description" content="Description: Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/insert_into_a_binary_search_tree/" />
+<meta property="article:published_time" content="2020-05-13T15:33:43+08:00" />
+<meta property="article:modified_time" content="2020-05-13T15:33:43+08:00" />
+<meta itemprop="name" content="701. Insert_into_a_binary_search_tree">
+<meta itemprop="description" content="Description: Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after">
+
+
+<meta itemprop="datePublished" content="2020-05-13T15:33:43&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-13T15:33:43&#43;08:00" />
+<meta itemprop="wordCount" content="1153">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="701. Insert_into_a_binary_search_tree"/>
+<meta name="twitter:description" content="Description: Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">701. Insert_into_a_binary_search_tree</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-13 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#description">Description:</a></li>
+<li><a href="#examples">Examples:</a></li>
+<li><a href="#thinking">Thinking:</a></li>
+<li><a href="#solutions">Solutions:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h3 id="description">Description:</h3>
+
+<blockquote>
+<p>Given the root node of a binary search tree (BST) and a value to be inserted
+into the tree, insert the value into the BST. Return the root node of the BST
+after the insertion. It is guaranteed that the new value does not exist in
+the original BST.</p>
+
+<p>Note that there may exist multiple valid ways for the insertion, as long as
+the tree remains a BST after insertion. You can return any of them.</p>
+</blockquote>
+
+<h3 id="examples">Examples:</h3>
+
+<blockquote>
+<p>For example, </p>
+
+<p>Given the tree:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"> <span class="err">⁠</span>       <span class="mi">4</span>
+ <span class="err">⁠</span>      <span class="o">/</span> \
+ <span class="err">⁠</span>     <span class="mi">2</span>   <span class="mi">7</span>
+ <span class="err">⁠</span>    <span class="o">/</span> \
+ <span class="err">⁠</span>   <span class="mi">1</span>   <span class="mi">3</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>And the value to insert: 5</p>
+
+<p>You can return this binary search tree:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"> <span class="err">⁠</span>        <span class="mi">4</span>
+ <span class="err">⁠</span>      <span class="o">/</span>   \
+ <span class="err">⁠</span>     <span class="mi">2</span>     <span class="mi">7</span>
+ <span class="err">⁠</span>    <span class="o">/</span> \   <span class="o">/</span>
+ <span class="err">⁠</span>   <span class="mi">1</span>   <span class="mi">3</span> <span class="mi">5</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>This tree is also valid:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"> <span class="err">⁠</span>        <span class="mi">5</span>
+ <span class="err">⁠</span>      <span class="o">/</span>   \
+ <span class="err">⁠</span>     <span class="mi">2</span>     <span class="mi">7</span>
+ <span class="err">⁠</span>    <span class="o">/</span> \
+ <span class="err">⁠</span>   <span class="mi">1</span>   <span class="mi">3</span>
+ <span class="err">⁠</span>        \
+ <span class="err">⁠</span>         <span class="mi">4</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Constraints:</p>
+
+<p>The number of nodes in the given tree will be between 0 and 10^4.
+Each node will have a unique integer value from 0 to -10^8, inclusive.
+-10^8 &lt;= val &lt;= 10^8
+It&rsquo;s guaranteed that val does not exist in the original BST.</p>
+</blockquote>
+
+<h3 id="thinking">Thinking:</h3>
+
+<blockquote>
+<p>在 BST 中插入一个值，主要思路同在 BST
+中查找一个值。节点的添加位置有多种选择，这里我们使用最简单的一种方式，在叶子节点进行值的添加，
+思路是，一次比对 BST 中当前值和 target 值的大小，若 root.val &gt;
+target.val,则在左子树中进行遍历，直到走到叶子节点的位置，将 target
+值赋给当前节点的子节点即可</p>
+
+<p><br/></p>
+
+<p>该题让我们在二叉搜索树中插入结点，当前还需要保持二叉搜索树的性质，那么插入结点的方式就有多种，就像题目中给的那个例子。结点5可以有不同的方法，但是很显然，放在结点7的左子结点比代替结点4成为根结点要来的简单许多。怎么简单我们就怎么来，所以还是按照简单的来吧。由于二叉搜索树自带二分的性质，那么首先根结点比较，如果大于根结点值的话，说明肯定要插入到右子树中。所以接下来跟7比较，对于递归函数来说，结点7也可以当作是一个新的根结点，那么由于结点7的值大于目标值5，所以要去其左子树，我们发现其左子结点为空，那么我们就可以根据目标值来生成一个新的结点，然后连到结点7的左子树上即可。那么在递归函数中，首先判断当前结点是否为空，为空的话就新建一个结点返回。否则就判断当前结点值是否大于目标值，是的话就对左子结点调用递归函数，并将返回值赋给当前结点的左子结点，否则就对右子结点调用递归函数，并将返回值赋给当前结点的右子结点，最后返回当前结点即可</p>
+
+<p><br/>
+我们也可以不使用递归来做，而是用迭代。整体思路跟递归并没有太大的区别，但没有递归写法简洁。首先还是判空，若为空，就新建结点返回。然后用一个变量cur来遍历，在while循环中，如果当前值大于目标值，如果其左子结点不存在，那么我们新建结点，并连上其左子结点，并跳出循环；若左子结点存在，则cur指向其左子结点。否则，当前值小于目标值，若其右子结点不存在，新建结点并连上其右子结点，并跳出循环；若右子结点存在，则cur指向其右子结点。最后返回root即可</p>
+</blockquote>
+
+<h3 id="solutions">Solutions:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="c1"># Definition for a binary tree node.</span>
+<span class="k">class</span> <span class="nc">TreeNode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">right</span></code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>递归法：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">insertIntoBST</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">        :type root: TreeNode
+</span><span class="s2">        :type val: int
+</span><span class="s2">        :rtype: TreeNode
+</span><span class="s2">        &#34;&#34;&#34;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
+          <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span>
+          <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">insertIntoBST</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+          <span class="n">root</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">insertIntoBST</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">root</span></code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>迭代法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">insertIntoBST</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">        :type root: TreeNode
+</span><span class="s2">        :type val: int
+</span><span class="s2">        :rtype: TreeNode
+</span><span class="s2">        &#34;&#34;&#34;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
+          <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+        <span class="n">cur</span> <span class="o">=</span> <span class="n">root</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+          <span class="k">if</span> <span class="n">cur</span><span class="o">.</span><span class="n">val</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cur</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+              <span class="n">cur</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+              <span class="k">break</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">left</span>
+          <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cur</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+              <span class="n">cur</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+              <span class="k">break</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">right</span>
+        <span class="k">return</span> <span class="n">root</span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-13
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/kth_largest_element_in_a_stream/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">703. Kth_largest_element_in_a_stream</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/search_in_a_binary_search_tree/">
+            <span class="next-text nav-default">700. Search_in_a_binary_search_tree</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

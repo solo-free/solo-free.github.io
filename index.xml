@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 May 2020 17:47:22 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>Hugo is a static site engine written in Go.
+It makes use of a variety of open source projects including:
+ Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>450. Delete_node_in_a_bst</title>
+      <link>http://localhost:1313/post/delete_node_in_a_bst/</link>
+      <pubDate>Fri, 22 May 2020 17:47:22 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/delete_node_in_a_bst/</guid>
+      <description>Description: Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST. Basically, the deletion can be divided into two stages: Search for a node to remove. If the node is found, delete the node. Note: Time complexity should be O(height of tree). Example: root = [5,3,6,2,4,null,7] key = 3</description>
+    </item>
+    
+    <item>
+      <title>108. Convert_sorted_array_to_binary_search_tree</title>
+      <link>http://localhost:1313/post/convert_sorted_array_to_binary_search_tree/</link>
+      <pubDate>Wed, 20 May 2020 14:50:04 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/convert_sorted_array_to_binary_search_tree/</guid>
+      <description>Description: Given an array where elements are sorted in ascending order, convert it to a height balanced BST. For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1. Examples: Example: Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 1 2 3</description>
+    </item>
+    
+    <item>
+      <title>110. Balanced_binary_tree</title>
+      <link>http://localhost:1313/post/balanced_binary_tree/</link>
+      <pubDate>Fri, 15 May 2020 17:14:23 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/balanced_binary_tree/</guid>
+      <description>Description: Given a binary tree, determine if it is height-balanced. For this problem, a height-balanced binary tree is defined as: a binary tree in which the left and right subtrees of every node differ in height by no more than 1. Examples: Example 1: Given the following tree [3,9,20,null,null,15,7]: 1 2 3 4 5 ⁠ 3 ⁠ / \ ⁠ 9 20 ⁠ / \ ⁠ 15 7 Return true.</description>
+    </item>
+    
+    <item>
+      <title>235. Lowest_common_ancestor_of_a_binary_search_tree</title>
+      <link>http://localhost:1313/post/lowest_common_ancestor_of_a_binary_search_tree/</link>
+      <pubDate>Thu, 14 May 2020 17:54:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/lowest_common_ancestor_of_a_binary_search_tree/</guid>
+      <description>Description: Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5] Example: Example 1: Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8 Output: 6 Explanation: The LCA of nodes 2 and 8 is 6. Example 2: Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4 Output: 2 Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA</description>
+    </item>
+    
+    <item>
+      <title>703. Kth_largest_element_in_a_stream</title>
+      <link>http://localhost:1313/post/kth_largest_element_in_a_stream/</link>
+      <pubDate>Wed, 13 May 2020 19:01:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/kth_largest_element_in_a_stream/</guid>
+      <description>Description: Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element. Your KthLargest class will have a constructor which accepts an integer k and an integer array nums, which contains initial elements from the stream. For each call to the method KthLargest.add, return the element representing the kth largest element in</description>
+    </item>
+    
+    <item>
+      <title>701. Insert_into_a_binary_search_tree</title>
+      <link>http://localhost:1313/post/insert_into_a_binary_search_tree/</link>
+      <pubDate>Wed, 13 May 2020 15:33:43 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/insert_into_a_binary_search_tree/</guid>
+      <description>Description: Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after</description>
+    </item>
+    
+    <item>
+      <title>700. Search_in_a_binary_search_tree</title>
+      <link>http://localhost:1313/post/search_in_a_binary_search_tree/</link>
+      <pubDate>Wed, 13 May 2020 10:52:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/search_in_a_binary_search_tree/</guid>
+      <description>Description: Given the root node of a binary search tree (BST) and a value. You need to find the node in the BST that the node&amp;rsquo;s value equals the given value. Return the subtree rooted with that node. If such node doesn&amp;rsquo;t exist, you should return NULL. Examples: For example, Given the tree: 1 2 3 4 5 ⁠ 4 ⁠ / \ ⁠ 2 7 ⁠ / \ ⁠</description>
+    </item>
+    
+    <item>
+      <title>173. Binary_search_tree_iterator</title>
+      <link>http://localhost:1313/post/binary_search_tree_iterator/</link>
+      <pubDate>Tue, 12 May 2020 19:21:35 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/binary_search_tree_iterator/</guid>
+      <description>Description: Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest number in the BST. Examples: Example: 1 2 3 4 5 6 7 8 9 10 BSTIterator iterator = new BSTIterator(root); iterator.next(); // return 3 iterator.next(); // return 7 iterator.hasNext(); // return true iterator.next(); // return 9 iterator.hasNext(); // return true</description>
+    </item>
+    
+    <item>
+      <title>98. Validate_binary_search_tree</title>
+      <link>http://localhost:1313/post/validate_binary_search_tree/</link>
+      <pubDate>Wed, 06 May 2020 17:38:23 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/validate_binary_search_tree/</guid>
+      <description>Description: Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node&amp;rsquo;s key. The right subtree of a node contains only nodes with keys greater than the node&amp;rsquo;s key. Both the left and right subtrees must also be binary search trees. Examples: Example 1: 1</description>
+    </item>
+    
+    <item>
+      <title>297. Serialize_and_deserialize_binary_tree</title>
+      <link>http://localhost:1313/post/serialize_and_deserialize_binary_tree/</link>
+      <pubDate>Tue, 05 May 2020 19:12:36 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/serialize_and_deserialize_binary_tree/</guid>
+      <description>Description: Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just</description>
+    </item>
+    
+    <item>
+      <title>236. Lowest Common Ancestor of a Binary Tree</title>
+      <link>http://localhost:1313/post/lowest_common_ancestor_of_a_binary_tree/</link>
+      <pubDate>Tue, 05 May 2020 12:02:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/lowest_common_ancestor_of_a_binary_tree/</guid>
+      <description>Description: Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itsel</description>
+    </item>
+    
+    <item>
+      <title>117. Populating_next_right_pointers_in_each_node_ii</title>
+      <link>http://localhost:1313/post/populating_next_right_pointers_in_each_node_ii/</link>
+      <pubDate>Sun, 03 May 2020 18:10:04 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/populating_next_right_pointers_in_each_node_ii/</guid>
+      <description>Description: Given a binary tree struct Node { ⁠ int val; ⁠ Node *left; ⁠ Node *right; ⁠ Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL. Follow up: You may only use constant extra space. Recursive approach is fine, you may</description>
+    </item>
+    
+    <item>
+      <title>116. Populating_next Right_pointers_in_each_node</title>
+      <link>http://localhost:1313/post/populating_next_right_pointers_in_each_node/</link>
+      <pubDate>Sun, 26 Apr 2020 11:52:22 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/populating_next_right_pointers_in_each_node/</guid>
+      <description>Description: You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition: struct Node { ⁠ int val; ⁠ Node *left; ⁠ Node *right; ⁠ Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to</description>
+    </item>
+    
+    <item>
+      <title>105. Construct_binary_tree_from_preorder_and_inorder_traversal</title>
+      <link>http://localhost:1313/post/construct_binary_tree_from_preorder_and_inorder_traversal/</link>
+      <pubDate>Sat, 25 Apr 2020 17:59:55 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/construct_binary_tree_from_preorder_and_inorder_traversal/</guid>
+      <description>Description: Given preorder and inorder traversal of a tree, construct the binary tree. Note: You may assume that duplicates do not exist in the tree. Example: For example, given preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tree: 1 2 3 4 5 ⁠ 3 ⁠ / \ ⁠ 9 20 ⁠ / \ ⁠ 15 7 Thinking: 该题与LC106题思</description>
+    </item>
+    
+    <item>
+      <title>106. Construct_binary_tree_from_inorder_and_postorder_traversal</title>
+      <link>http://localhost:1313/post/construct_binary_tree_from_inorder_and_postorder_traversal/</link>
+      <pubDate>Fri, 24 Apr 2020 18:08:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/construct_binary_tree_from_inorder_and_postorder_traversal/</guid>
+      <description>Description: Given inorder and postorder traversal of a tree, construct the binary tree. Note: You may assume that duplicates do not exist in the tree. Examples: For example, given inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tree: 1 2 3 4 5 ⁠ 3 ⁠ / \ ⁠ 9 20 ⁠ / \ ⁠ 15 7 Thinking: 该题考察如何通过给定</description>
+    </item>
+    
+    <item>
+      <title>112. Path_sum</title>
+      <link>http://localhost:1313/post/path_sum/</link>
+      <pubDate>Wed, 08 Apr 2020 20:28:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/path_sum/</guid>
+      <description>Description: Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum. Note: A leaf is a node with no children. Example: Given the below binary tree and sum = 22, 1 2 3 4 5 6 7 ⁠ 5 ⁠ / \ ⁠ 4 8 ⁠ / / \ ⁠ 11</description>
+    </item>
+    
+    <item>
+      <title>101. Symmetric_tree</title>
+      <link>http://localhost:1313/post/symmetric_tree/</link>
+      <pubDate>Fri, 03 Apr 2020 18:18:53 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/symmetric_tree/</guid>
+      <description>Description: Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center). Example: For example, this binary tree [1,2,2,3,4,4,3] is symmetric: 1 2 3 4 5 ⁠ 1 ⁠ / \ ⁠ 2 2 ⁠/ \ / \ 3 4 4 3 But the following [1,2,2,null,3,null,3] is not: 1 2 3 4 5 ⁠ 1 ⁠ / \ ⁠ 2 2 ⁠ \</description>
+    </item>
+    
+    <item>
+      <title>104. Maximum_depth_of_binary_tree</title>
+      <link>http://localhost:1313/post/maximum_depth_of_binary_tree/</link>
+      <pubDate>Fri, 03 Apr 2020 17:09:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/maximum_depth_of_binary_tree/</guid>
+      <description>Description: Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. Note: A leaf is a node with no children. Example: Given binary tree [3,9,20,null,null,15,7], 1 2 3 4 5 ⁠ 3 ⁠ / \ ⁠ 9 20 ⁠ / \ ⁠ 15 7 return its depth = 3. Thinking:</description>
+    </item>
+    
+    <item>
+      <title>102. Binary_tree_lever_order_traversal</title>
+      <link>http://localhost:1313/post/binary_tree_level_order_traversal/</link>
+      <pubDate>Wed, 01 Apr 2020 18:16:18 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/binary_tree_level_order_traversal/</guid>
+      <description>Description: Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level). Example: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Given binary tree [3,9,20,null,null,15,7], ⁠ 3 ⁠ / \ ⁠ 9 20 ⁠ / \ ⁠ 15 7 return its level order traversal as: [ ⁠ [3], ⁠ [9,20], ⁠ [15,7]</description>
+    </item>
+    
+    <item>
+      <title>145. Binary_tree_postorder_traversal</title>
+      <link>http://localhost:1313/post/binary_tree_postorder_traversal/</link>
+      <pubDate>Wed, 01 Apr 2020 16:43:42 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/binary_tree_postorder_traversal/</guid>
+      <description>Description: Given a binary tree, return the postorder traversal of its nodes&amp;rsquo; values. Example: Input: [1,null,2,3] 1 2 3 4 5 ⁠ 1 ⁠ \ ⁠ 2 ⁠ / ⁠ 3 Output: [3,2,1] Thinking: 该题考察树的后序遍历, 后序遍历即 DFS PostOrder 遵循，bottom-&amp;gt;top,</description>
+    </item>
+    
+    <item>
+      <title>94. Binary_tree_inorder_traversal</title>
+      <link>http://localhost:1313/post/binary_tree_inorder_traversal/</link>
+      <pubDate>Wed, 01 Apr 2020 16:43:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/binary_tree_inorder_traversal/</guid>
+      <description>Description： Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values. Example: Input: [1,null,2,3] 1 2 3 4 5 ⁠ 1 ⁠ \ ⁠ 2 ⁠ / ⁠ 3 Output: [1,3,2] Follow up: Follow up: Recursive solution is trivial, could you do it iteratively? Thinking: 中序遍历树，即 DFS InOrder, 遵循 left-&amp;gt;root-&amp;gt;right</description>
+    </item>
+    
+    <item>
+      <title>144. Binary_tree_preorder_traversal</title>
+      <link>http://localhost:1313/post/binary_tree_preorder_traversal/</link>
+      <pubDate>Tue, 31 Mar 2020 15:59:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/binary_tree_preorder_traversal/</guid>
+      <description>Description: Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values. Example: Input: [1,null,2,3] 1 2 3 4 5 1 ⁠ \ ⁠ 2 ⁠ / ⁠ 3 Output: [1,2,3] Follow up: Follow up: Recursive solution is trivial, could you do it iteratively? Thinking: 该题要求使用前序遍历一棵树，前序遍历即DFS Pr</description>
+    </item>
+    
+    <item>
+      <title>141. Linked_list_cycle</title>
+      <link>http://localhost:1313/post/linked_list_cycle/</link>
+      <pubDate>Wed, 25 Mar 2020 17:56:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linked_list_cycle/</guid>
+      <description>Description: Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list. Examples: Example 1: Input: head = [3,2,0,-4], pos = 1 Output: true Explanation: There is a cycle</description>
+    </item>
+    
+    <item>
+      <title>234. Palindrome_linked_list</title>
+      <link>http://localhost:1313/post/palindrome_linked_list/</link>
+      <pubDate>Tue, 24 Mar 2020 16:31:12 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/palindrome_linked_list/</guid>
+      <description>Description: Given a singly linked list, determine if it is a palindrome. Examples: Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space? Thinking: 使用链表来判断是否是回文太过复杂, 可以遍历将链表中的元素保存到列</description>
+    </item>
+    
+    <item>
+      <title>21. Merge_two_sorted_lists</title>
+      <link>http://localhost:1313/post/merge_two_sorted_lists/</link>
+      <pubDate>Tue, 24 Mar 2020 14:36:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/merge_two_sorted_lists/</guid>
+      <description>Description:  Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+ Examples:  Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4  Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
+ Thinking:  Merge two sorted list can use both iteration way and recursion way.  Thinking how to merge two sorted linked list by comparing the element in linked lists and change the pointer to link this elements.</description>
+    </item>
+    
+    <item>
+      <title>206. Reverse Linked List</title>
+      <link>http://localhost:1313/post/reverse_linked_list/</link>
+      <pubDate>Mon, 23 Mar 2020 10:18:11 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/reverse_linked_list/</guid>
+      <description>Description: Reverse a singly linked list. Examples: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Note: A linked list can be reversed either iteratively or recursively. Could you implement both? Thinking: 如果将翻转 linked list 的重点放在 pointer 的指向翻转上，解决问题的思路会更简单些。 链表翻转可使用迭代的</description>
+    </item>
+    
+    <item>
+      <title>19. Remove Nth Node From End of List</title>
+      <link>http://localhost:1313/post/remove-nth-node-from-end-of-list/</link>
+      <pubDate>Sun, 22 Mar 2020 16:43:59 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/remove-nth-node-from-end-of-list/</guid>
+      <description>Description: Given a linked list, remove the n-th node from the end of list and return its head. Examples: Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5. Note: Given n will always be valid. Follow up: Could you do this in one pass? Thinking: The normal way to remove a node from a list is finding the</description>
+    </item>
+    
+    <item>
+      <title>237. Delete_node_in_a_linked_list</title>
+      <link>http://localhost:1313/post/delete_node_in_a_linked_list/</link>
+      <pubDate>Sat, 21 Mar 2020 08:52:18 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/delete_node_in_a_linked_list/</guid>
+      <description>Description:  Write a function to delete a node (except the tail) in a singly linked list, given only access to that node. Given linked list &amp;ndash; head = [4,5,1,9], which looks like following
+ Examples:  Example 1: Input: head = [4,5,1,9], node = 5 Output: [4,1,9] Explanation: You are given the second node with value 5, the linked list should become 4 -&amp;gt; 1 -&amp;gt; 9 after calling your function.</description>
+    </item>
+    
+    <item>
+      <title>14. Longest_common_prefix</title>
+      <link>http://localhost:1313/post/longest_common_prefix/</link>
+      <pubDate>Wed, 29 Jan 2020 11:07:01 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/longest_common_prefix/</guid>
+      <description>Description: Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string &amp;ldquo;&amp;rdquo;. Examples: Example 1: Input: [&amp;ldquo;flower&amp;rdquo;,&amp;ldquo;flow&amp;rdquo;,&amp;ldquo;flight&amp;rdquo;] Output: &amp;ldquo;fl&amp;rdquo; Example 2: Input: [&amp;ldquo;dog&amp;rdquo;,&amp;ldquo;racecar&amp;rdquo;,&amp;ldquo;car&amp;rdquo;] Output: &amp;ldquo;&amp;rdquo; Explanation: There is no common prefix among the input strings. Note: All given inputs are in lowercase letters a-z. Thinking: 该题需要找到给定列表</description>
+    </item>
+    
+    <item>
+      <title>38.Count_and_say</title>
+      <link>http://localhost:1313/post/count_and_say/</link>
+      <pubDate>Thu, 16 Jan 2020 15:22:36 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/count_and_say/</guid>
+      <description>Describe: Given an integer n where 1 ≤ n ≤ 30, generate the n^th term of the count-and-say sequence. You can do so recursively, in other words from the previous member read off the digits, counting the number of digits in groups of the same digit. Note: Each term of the sequence of integers will be represented as a string. Examples: Example 1: Input: 1 Output: &amp;ldquo;1&amp;rdquo; Explanation: This is</description>
+    </item>
+    
+    <item>
+      <title>28. Implement Strstr</title>
+      <link>http://localhost:1313/post/implement-strstr/</link>
+      <pubDate>Sun, 05 Jan 2020 17:53:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/implement-strstr/</guid>
+      <description>Description: Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack. Examples: Example 1: Input: haystack = &amp;ldquo;hello&amp;rdquo;, needle = &amp;ldquo;ll&amp;rdquo; Output: 2 Example 2: Input: haystack = &amp;ldquo;aaaaa&amp;rdquo;, needle = &amp;ldquo;bba&amp;rdquo; Output: -1 Clarification: What should we return when needle is an empty string? This is a great question to ask during an interview. For the purpose of this</description>
+    </item>
+    
+    <item>
+      <title>8. String_to_integer</title>
+      <link>http://localhost:1313/post/string_to_integer/</link>
+      <pubDate>Tue, 17 Dec 2019 15:19:37 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/string_to_integer/</guid>
+      <description>Describtion: Implement atoi which converts a string to an integer. The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value. The string can contain additional characters after those that form the integral number, which are</description>
+    </item>
+    
+    <item>
+      <title>125. Is_palindrome</title>
+      <link>http://localhost:1313/post/is_palindrome/</link>
+      <pubDate>Mon, 16 Dec 2019 16:30:42 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/is_palindrome/</guid>
+      <description>Description: Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases. Note: For the purpose of this problem, we define empty string as valid palindrome. Examples: Example 1: Input: &amp;ldquo;A man, a plan, a canal: Panama&amp;rdquo; Output: true Example 2: Input: &amp;ldquo;race a car&amp;rdquo; Output: false Thinking: 该题考察给定的字符串是否是回文字符</description>
+    </item>
+    
+    <item>
+      <title>242. Valid_anagram</title>
+      <link>http://localhost:1313/post/valid_anagram/</link>
+      <pubDate>Mon, 16 Dec 2019 14:37:59 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/valid_anagram/</guid>
+      <description>Description: Given two strings s and t , write a function to determine if t is an anagram of s. Example: Example 1: Input: s = &amp;ldquo;anagram&amp;rdquo;, t = &amp;ldquo;nagaram&amp;rdquo; Output: true Example 2: Input: s = &amp;ldquo;rat&amp;rdquo;, t = &amp;ldquo;car&amp;rdquo; Output: false Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such</description>
+    </item>
+    
+    <item>
+      <title>387. First Unique Character in a String</title>
+      <link>http://localhost:1313/post/first-unique-character-in-a-string/</link>
+      <pubDate>Sun, 15 Dec 2019 16:12:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/first-unique-character-in-a-string/</guid>
+      <description>Describtion: Given a string, find the first non-repeating character in it and return it&amp;rsquo;s index. If it doesn&amp;rsquo;t exist, return -1. Examples: example1: s = &amp;ldquo;leetcode&amp;rdquo; return 0 example2: s = &amp;ldquo;loveleetcode&amp;rdquo;, return 2 Thinking: 本题主要考察如何找到字符串中第一次出现的唯一元素, 故需要一个值来记录元</description>
+    </item>
+    
+    <item>
+      <title>7. Reverse_integer</title>
+      <link>http://localhost:1313/post/reverse_integer/</link>
+      <pubDate>Wed, 11 Dec 2019 17:18:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/reverse_integer/</guid>
+      <description>Describe: Given a 32-bit signed integer, reverse digits of an integer. Example: Example 1: Input: 123 Output: 321 Example 2: Input: -123 Output: -321 Example 3: Input: 120 Output: 21 Note: Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31, 2^31 − 1]. For the purpose of this problem, assume that your function returns</description>
+    </item>
+    
+    <item>
+      <title>344. Reverse_string</title>
+      <link>http://localhost:1313/post/reverse_string/</link>
+      <pubDate>Sat, 07 Dec 2019 17:02:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/reverse_string/</guid>
+      <description>Describtion: Write a function that reverses a string. The input string is given as an array of characters char[]. Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory. You may assume all the characters consist of printable ascii characters. Example: Example 1: Input: [&amp;ldquo;h&amp;rdquo;,&amp;ldquo;e&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;o&amp;rdquo;] Output: [&amp;ldquo;o&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;e&amp;rdquo;,&amp;ldquo;h&amp;rdquo;] Example 2: Input: [&amp;ldquo;H&amp;rdquo;,&amp;ldquo;a&amp;rdquo;,&amp;ldquo;n&amp;rdquo;,&amp;ldquo;n&amp;rdquo;,&amp;ldquo;a&amp;rdquo;,&amp;ldquo;h&amp;rdquo;] Output: [&amp;ldquo;h&amp;rdquo;,&amp;ldquo;a&amp;rdquo;,&amp;ldquo;n&amp;rdquo;,&amp;ldquo;n&amp;rdquo;,&amp;ldquo;a&amp;rdquo;,&amp;ldquo;H&amp;rdquo;] Thinking: 翻转字符</description>
+    </item>
+    
+    <item>
+      <title>283. Move_zeroes</title>
+      <link>http://localhost:1313/post/move_zeroes/</link>
+      <pubDate>Sun, 24 Nov 2019 16:21:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/move_zeroes/</guid>
+      <description>Describtion: Given an array nums, write a function to move all 0&amp;rsquo;s to the end of it while maintaining the relative order of the non-zero elements. Example: Input: [0,1,0,3,12] Output: [1,3,12,0,0] Note: You must do this in-place without making a copy of the array. Minimize the total number of operations. Thinking: 遍历找到数组中为0的元素，将该位置上的</description>
+    </item>
+    
+    <item>
+      <title>350. Intersection of Two Arrays Ii</title>
+      <link>http://localhost:1313/post/intersection-of-two-arrays-ii/</link>
+      <pubDate>Sun, 17 Nov 2019 17:32:46 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/intersection-of-two-arrays-ii/</guid>
+      <description>Description: Given two arrays, write a function to compute their intersection. Example: Example 1: Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2,2] Example 2: Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [4,9] Note: Each element in the result should appear as many times as it shows in both arrays. The result can be in any order. Follow up: What if the given array is already sorted? How would</description>
+    </item>
+    
+    <item>
+      <title>136. Single_num</title>
+      <link>http://localhost:1313/post/single_num/</link>
+      <pubDate>Sun, 17 Nov 2019 14:34:59 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/single_num/</guid>
+      <description>Description: Given a non-empty array of integers, every element appears twice except for one. Find that single one. Example: Example 1: Input: [2,2,1] Output: 1 Example 2: Input: [4,1,2,1,2] Output: 4 Thinking: 寻找数组中唯一的值，可以通过遍历数组找到只出现一次的值 Solution: solution1: &amp;gt; 利用数组遍历保存</description>
+    </item>
+    
+    <item>
+      <title>217. Contains_duplicate</title>
+      <link>http://localhost:1313/post/contains_duplicate/</link>
+      <pubDate>Sat, 16 Nov 2019 10:13:05 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/contains_duplicate/</guid>
+      <description>Describtion: Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct. Example: Example1: Input: [1,2,3,1] Output: true Example2: Input: [1,2,3,4] Output: false Thinking: 判断一个数组是否存在重复数值，可以通过比</description>
+    </item>
+    
+    <item>
+      <title>121. Best_time_to_buy_and_sell_stock</title>
+      <link>http://localhost:1313/post/best_time_to_buy_and_sell_stock/</link>
+      <pubDate>Fri, 15 Nov 2019 17:13:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/best_time_to_buy_and_sell_stock/</guid>
+      <description>Describtion: Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note that you cannot sell a stock before you buy one. Example: Example 1: Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy</description>
+    </item>
+    
+    <item>
+      <title>189. rotate_array</title>
+      <link>http://localhost:1313/post/rotate_array/</link>
+      <pubDate>Wed, 13 Nov 2019 16:55:49 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/rotate_array/</guid>
+      <description>Describtion: Given an array, rotate the array to the right by k steps, where k is non-negative. Example: Example 1: Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4] Example 2: Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2</description>
+    </item>
+    
+    <item>
+      <title>1. two_sum</title>
+      <link>http://localhost:1313/post/two_sum/</link>
+      <pubDate>Sun, 10 Nov 2019 12:36:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/two_sum/</guid>
+      <description>Describtion: Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Example: Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1]. Thinking: 维护一个</description>
+    </item>
+    
+  </channel>
+</rss>

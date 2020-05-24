@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>242. Valid_anagram - </title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Description: Given two strings s and t , write a function to determine if t is an anagram of s. Example: Example 1: Input: s = &amp;ldquo;anagram&amp;rdquo;, t = &amp;ldquo;nagaram&amp;rdquo; Output: true Example 2: Input: s = &amp;ldquo;rat&amp;rdquo;, t = &amp;ldquo;car&amp;rdquo; Output: false Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/valid_anagram/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="242. Valid_anagram" />
+<meta property="og:description" content="Description: Given two strings s and t , write a function to determine if t is an anagram of s. Example: Example 1: Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo; Output: true Example 2: Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo; Output: false Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/valid_anagram/" />
+<meta property="article:published_time" content="2019-12-16T14:37:59+08:00" />
+<meta property="article:modified_time" content="2019-12-16T14:37:59+08:00" />
+<meta itemprop="name" content="242. Valid_anagram">
+<meta itemprop="description" content="Description: Given two strings s and t , write a function to determine if t is an anagram of s. Example: Example 1: Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo; Output: true Example 2: Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo; Output: false Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such">
+
+
+<meta itemprop="datePublished" content="2019-12-16T14:37:59&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-16T14:37:59&#43;08:00" />
+<meta itemprop="wordCount" content="412">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="242. Valid_anagram"/>
+<meta name="twitter:description" content="Description: Given two strings s and t , write a function to determine if t is an anagram of s. Example: Example 1: Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo; Output: true Example 2: Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo; Output: false Note: You may assume the string contains only lowercase alphabets. Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">242. Valid_anagram</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-16 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#description">Description:</a></li>
+<li><a href="#example">Example:</a></li>
+<li><a href="#follow-up">Follow up:</a></li>
+<li><a href="#thinking">Thinking:</a></li>
+<li><a href="#solution">Solution:</a></li>
+<li><a href="#flowchart">FlowChart:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h3 id="description">Description:</h3>
+
+<blockquote>
+<p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
+</blockquote>
+
+<h3 id="example">Example:</h3>
+
+<ul>
+<li>Example 1:</li>
+</ul>
+
+<p>Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;
+ Output: true</p>
+
+<ul>
+<li>Example 2:</li>
+</ul>
+
+<p>Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;
+ Output: false</p>
+
+<blockquote>
+<p>Note: You may assume the string contains only lowercase alphabets.</p>
+</blockquote>
+
+<h3 id="follow-up">Follow up:</h3>
+
+<blockquote>
+<p>What if the inputs contain unicode characters? How would you adapt your solution to such case?</p>
+</blockquote>
+
+<h3 id="thinking">Thinking:</h3>
+
+<blockquote>
+<p>该题主要考察有效的字母异位词,字母异位词即两个单词的组成元素的个数一致,但元素出现的顺序可以不同,
+故只需要判断组成单词的元素个数是否相同，且每个元素的出现的次数是否相同即可</p>
+</blockquote>
+
+<h3 id="solution">Solution:</h3>
+
+<ul>
+<li><p>solution 1 (效率比较低的解法):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">def</span> <span class="nf">isAnagram</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">s1</span><span class="p">,</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">s1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">idx</span><span class="p">]):</span>
+    <span class="n">s1</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">idx</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">s1</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">idx</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">t1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">idx</span><span class="p">]):</span>
+    <span class="n">t1</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">idx</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">t1</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">idx</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span> <span class="o">!=</span> <span class="n">t1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ele</span><span class="p">):</span>
+      <span class="k">return</span> <span class="kc">False</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">False</span>
+<span class="k">return</span> <span class="kc">True</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>solution 2 (字符串解法):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">def</span> <span class="nf">isAnagram</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+  <span class="k">return</span> <span class="kc">False</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">t</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">return</span> <span class="kc">False</span>
+<span class="k">return</span> <span class="kc">True</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h3 id="flowchart">FlowChart:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-flow" data-lang="flow"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-flow" data-lang="flow">cond1=&gt;condition: 判断给定字符串s，与字符串t的长度是否一致
+op1=&gt;operation: 返回 false
+op2=&gt;operation: 获取字符串s 的去重元素集合 set(s)
+op3=&gt;operation: 遍历集合,获取每个集合元素
+cond2=&gt;condition: 判断集合元素在字符串 s 中的个数是否与 在字符串 t 中的个数一致
+op4=&gt;condition: 返回 false
+ed=&gt;end: 遍历结束后，返回 True
+
+cond1(yes)-&gt;op2-&gt;op3-&gt;cond2
+cond1(no)-&gt;op1
+cond2(yes)-&gt;ed
+cond2(no)-&gt;op4</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-12-16
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/is_palindrome/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">125. Is_palindrome</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/first-unique-character-in-a-string/">
+            <span class="next-text nav-default">387. First Unique Character in a String</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script><script>window.flowchartDiagramsOptions = { 'x': 0, 'y': 0, 'line-width': 3, 'line-length': 50, 'text-margin': 10, 'font-size': 14, 'font-color': 'black', 'line-color': 'black', 'element-color': 'black', 'fill': 'white', 'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'scale': 1, 'i-am-a-comment-1': 'Do not use //!', 'i-am-a-comment-2': 'style symbol types', 'symbols': { 'start': { 'font-color': 'black', 'element-color': 'black', 'fill': 'white' }, 'end': { 'class': 'end-element' } }, 'i-am-a-comment-3': 'even flowstate support ;-)', 'flowstate': { 'request': {'fill': 'blue'} } };</script><script src="https://cdn.jsdelivr.net/npm/raphael@2.2.7/raphael.min.js" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/flowchart.js@1.8.0/release/flowchart.min.js" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
